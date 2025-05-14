@@ -10,7 +10,8 @@ for index,row in df.iterrows():
     pdf.set_font(family='Times', size=26, style='B')
     pdf.set_text_color(0,0,0)
     pdf.cell(w=0,h=12,txt=row['Topic'],align="L",ln=1,border=0)
-    pdf.line(10,21,200,21)
+    for i in range(21,280,12):
+        pdf.line(x1=10, y1=i, x2=200, y2=i)
 
     #Set Footer
     pdf.ln(257)
@@ -19,6 +20,9 @@ for index,row in df.iterrows():
     pdf.cell(w=0,h=12,txt=row['Topic'],align="R",ln=1,border=0)
     for i in range(row["Pages"] - 1):
         pdf.add_page()
+        for i in range(15, 280, 12):
+            pdf.line(x1=10, y1=i, x2=200, y2=i)
+
         # Set Footer
         pdf.ln(270)
         pdf.set_font(family='Times', size=14, style='I')
