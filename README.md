@@ -7,8 +7,8 @@
 
 ## Steps involved
 ### Install required libraries - fpdf, pandas.
-### Initialize PDF layout - fpdf.
-### Add and Read CSV file - pandas.
-### Iterate through CSV Rows - itterrows().
-### Generate page dynamically - for loop.
-### Add Header and Footer.
+### Initialize PDF layout - Customize required font style, color, size.
+### Import CSV file and add its path.
+### Edit PDF name in output line. 
+### PDF will be available in project folder.
+
